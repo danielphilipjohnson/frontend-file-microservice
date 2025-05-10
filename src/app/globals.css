@@ -1,0 +1,119 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@layer utilities {
+  /* Glitch Low Animation */
+  @keyframes glitch-low {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-1px, 1px);
+    }
+    40% {
+      transform: translate(-1px, -1px);
+    }
+    60% {
+      transform: translate(1px, 1px);
+    }
+    80% {
+      transform: translate(1px, -1px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  /* Glitch Medium Animation */
+  @keyframes glitch-medium {
+    0% {
+      transform: translate(0);
+      text-shadow:
+        0.5px 0 0 theme("colors.red.500"),
+        -0.5px 0 0 theme("colors.blue.500");
+    }
+    20% {
+      transform: translate(-2px, 1px);
+      text-shadow:
+        1px 0 0 theme("colors.red.500"),
+        -1px 0 0 theme("colors.blue.500");
+    }
+    40% {
+      transform: translate(-2px, -1px);
+      text-shadow:
+        1px 0 0 theme("colors.red.500"),
+        -1px 0 0 theme("colors.blue.500");
+    }
+    60% {
+      transform: translate(2px, 1px);
+      text-shadow:
+        0.5px 0 0 theme("colors.red.500"),
+        -0.5px 0 0 theme("colors.blue.500");
+    }
+    80% {
+      transform: translate(2px, -1px);
+      text-shadow:
+        0.5px 0 0 theme("colors.red.500"),
+        -0.5px 0 0 theme("colors.blue.500");
+    }
+    100% {
+      transform: translate(0);
+      text-shadow:
+        0.5px 0 0 theme("colors.red.500"),
+        -0.5px 0 0 theme("colors.blue.500");
+    }
+  }
+
+  /* Glitch High Animation */
+  @keyframes glitch-high {
+    0% {
+      transform: translate(0);
+      text-shadow:
+        1px 0 0 theme("colors.red.500"),
+        -1px 0 0 theme("colors.blue.500");
+    }
+    20% {
+      transform: translate(-3px, 2px);
+      text-shadow:
+        2px 0 0 theme("colors.red.500"),
+        -2px 0 0 theme("colors.blue.500");
+    }
+    40% {
+      transform: translate(-3px, -2px);
+      text-shadow:
+        2px 0 0 theme("colors.red.500"),
+        -2px 0 0 theme("colors.blue.500");
+    }
+    60% {
+      transform: translate(3px, 2px);
+      text-shadow:
+        1px 0 0 theme("colors.red.500"),
+        -1px 0 0 theme("colors.blue.500");
+    }
+    80% {
+      transform: translate(3px, -2px);
+      text-shadow:
+        1px 0 0 theme("colors.red.500"),
+        -1px 0 0 theme("colors.blue.500");
+    }
+    100% {
+      transform: translate(0);
+      text-shadow:
+        1px 0 0 theme("colors.red.500"),
+        -1px 0 0 theme("colors.blue.500");
+    }
+  }
+
+  /* Utility classes for glitch animations */
+  .animate-glitch-low {
+    animation: glitch-low 3s infinite;
+  }
+
+  .animate-glitch-medium {
+    animation: glitch-medium 3s infinite;
+  }
+
+  .animate-glitch-high {
+    animation: glitch-high 3s infinite;
+  }
+}
