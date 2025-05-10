@@ -12,7 +12,7 @@ const CyberpunkFooter = ({
   product,
 }: CyberpunkFooterProps) => {
   return (
-    <footer className="mt-16 pt-8 border-t border-gray-800 text-sm text-gray-500">
+    <footer className="mt-16 pt-8 border-t border-gray-800 text-sm text-gray-500 pb-16">
       <div className="flex justify-between items-center">
         <div>
           {system} • {product} {version}
