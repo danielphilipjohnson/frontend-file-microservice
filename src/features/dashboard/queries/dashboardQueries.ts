@@ -2,7 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 import { apiClient } from "@/lib/api/client";
 import { API_ROUTES } from "@/lib/api/routes";
 
-// Define types for your data structures
 export interface Metrics {
   uptime_seconds: number;
   memory_usage_mb: number;
@@ -16,14 +15,12 @@ export interface Health {
   timestamp: number;
 }
 
-// Fetch functions - these abstract the API call details
 export const fetchMetrics = () =>
   apiClient.get<Metrics>(API_ROUTES.DASHBOARD.METRICS);
 
 export const fetchHealth = () =>
   apiClient.get<Health>(API_ROUTES.DASHBOARD.HEALTH);
 
-// Query hooks - these use TanStack Query to manage server state
 export const useDashboardMetrics = () =>
   useQuery<Metrics>({
     queryKey: ["dashboard", "metrics"],
